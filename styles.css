@@ -43,70 +43,51 @@
   --maxw: 1080px;
   --maxw-narrow: 720px;
 
-  /* Neutrals (shared) */
+  /* Neutrals — Avicenna brand palette (avicennalawyers.com.au) */
   --white: #ffffff;
-  --ink: #1b2430;
-  --ink-soft: #475067;
-  --line: #e6e9ef;
-  --focus: #2f6fed;
+  --ink: #191919;          /* brand charcoal — primary dark (logo, headings, buttons) */
+  --ink-soft: #535353;     /* brand grey — body / muted text */
+  --line: #d8d8d8;         /* brand border grey (#C8C8C8), softened for thin rules */
+  --focus: #0b267f;        /* brand navy — focus ring */
 
-  /* Theme hooks — overridden per theme below */
+  /* Shared brand palette — BOTH pages draw from this single set of hues.
+     Calm vs sharp is expressed through weight/spacing, not different colours. */
   --bg: #ffffff;
-  --bg-alt: #f6f8fb;
+  --bg-alt: #f1f1f1;       /* brand light-grey section wash */
   --surface: #ffffff;
   --text: var(--ink);
   --text-soft: var(--ink-soft);
-  --brand: #2b5c8a;
-  --brand-deep: #1d4060;
-  --brand-tint: #eef4fa;
-  --accent: #2b5c8a;
-  --cta: #2b5c8a;
+  --brand: #191919;        /* primary brand dark */
+  --brand-deep: #0e0e0e;   /* deepest dark for dense / dark sections */
+  --brand-tint: #f1f1f1;   /* light brand wash (chips, soft panels) */
+  --accent: #b8893b;       /* GOLD accent — retained per client; dark-bg use only */
+  --cta: #191919;
   --cta-text: #ffffff;
-  --cta-hover: #1d4060;
-  --hero-grad: linear-gradient(160deg, #eef4fa 0%, #ffffff 70%);
+  --cta-hover: #000000;
+  --hero-grad: linear-gradient(170deg, #ffffff 0%, #f4f4f4 100%);
   --header-bg: rgba(255, 255, 255, 0.92);
   --radius-card: var(--radius);
 }
 
-/* ----- Theme 1: CALM / WARM (Criminal & Traffic) --------------------------- */
-.theme-calm {
-  --bg: #ffffff;
-  --bg-alt: #f4f6f5;
-  --surface: #ffffff;
-  --brand: #3a6b63;        /* muted teal-sage */
-  --brand-deep: #284b46;
-  --brand-tint: #eef3f1;
-  --accent: #b07a4a;       /* warm clay accent */
-  --cta: #3a6b63;
-  --cta-hover: #284b46;
-  --cta-text: #ffffff;
-  --text: #243029;
-  --text-soft: #51605a;
-  --line: #e3e9e6;
-  --hero-grad: linear-gradient(165deg, #eef3f1 0%, #f7f5f1 60%, #ffffff 100%);
-  --header-bg: rgba(255, 255, 255, 0.92);
-  --radius-card: 16px;
-}
+/* Both pages share the brand palette above. The two classes below adjust ONLY
+   tone — whitespace, section weight, hero treatment, corner softness — never hue. */
 
-/* ----- Theme 2: SHARP / CORPORATE (Corporate & Commercial) ----------------- */
-.theme-corporate {
-  --bg: #ffffff;
-  --bg-alt: #f1f4f8;
-  --surface: #ffffff;
-  --brand: #16314f;        /* deep navy */
-  --brand-deep: #0e2238;
-  --brand-tint: #eaf0f6;
-  --accent: #b8893b;       /* restrained gold */
-  --cta: #16314f;
-  --cta-hover: #0e2238;
-  --cta-text: #ffffff;
-  --text: #131c27;
-  --text-soft: #46546a;
-  --line: #dfe5ee;
-  --hero-grad: linear-gradient(155deg, #0e2238 0%, #16314f 55%, #1d3e62 100%);
-  --header-bg: rgba(255, 255, 255, 0.94);
-  --radius-card: 8px;
+/* ----- Tone: CALM (Criminal & Traffic) — softer, lighter, more whitespace ---- */
+.theme-calm {
+  --bg-alt: #f6f6f6;       /* gentler grey → softer contrast */
+  --brand-tint: #f4f4f4;
+  --hero-grad: linear-gradient(170deg, #ffffff 0%, #f3f3f3 65%, #ffffff 100%); /* light hero */
+  --radius-card: 16px;     /* softer corners */
 }
+.theme-calm .section { padding: var(--sp-8) 0; }   /* more breathing room */
+
+/* ----- Tone: SHARP (Corporate & Commercial) — denser, deeper brand dark ------ */
+.theme-corporate {
+  --bg-alt: #f1f1f1;
+  --hero-grad: linear-gradient(160deg, #0e0e0e 0%, #191919 55%, #242424 100%); /* dark hero */
+  --radius-card: 8px;      /* tighter corners */
+}
+.theme-corporate .section { padding: var(--sp-6) 0; }   /* denser rhythm */
 
 /* ----- Reset / base -------------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -143,7 +124,7 @@ ul { margin: 0; padding-left: 1.1em; }
   letter-spacing: 0.12em;
   font-size: var(--fs-xs);
   font-weight: 700;
-  color: var(--accent);
+  color: var(--brand);   /* dark on light sections — gold would fail AA here */
   margin: 0 0 var(--sp-2);
 }
 .section__lead { color: var(--text-soft); font-size: var(--fs-md); max-width: 60ch; }
@@ -241,14 +222,19 @@ body { padding-bottom: 74px; } /* room for the mobile bar */
 .hero__reassure { margin-top: var(--sp-4); font-size: var(--fs-sm); color: var(--text-soft); display: inline-flex; align-items: center; gap: var(--sp-2); }
 
 /* Corporate theme: dark hero needs light text */
-.theme-corporate .hero { color: #eef3f9; }
+.theme-corporate .hero { color: #f2f2f2; }
 .theme-corporate .hero h1 { color: #ffffff; }
-.theme-corporate .hero__sub { color: #c7d4e2; }
+.theme-corporate .hero__sub { color: #d6d6d6; }
 .theme-corporate .hero__sub strong { color: #ffffff; }
-.theme-corporate .hero__credibility { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: #eaf2fb; }
-.theme-corporate .hero__reassure { color: #b9c7d8; }
+.theme-corporate .hero__credibility { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.20); color: #f0f0f0; }
+.theme-corporate .hero__credibility .trust__icon { color: var(--accent); }  /* gold accent on dark */
+.theme-corporate .hero__reassure { color: #cfcfcf; }
 .theme-corporate .hero .btn--ghost { color: #ffffff; }
 .theme-corporate .hero .btn--ghost:hover { background: rgba(255,255,255,0.12); }
+/* Hero CTA is brand-dark; invert it on the dark hero so it stays visible (AA).
+   Scoped to .hero__cta so the white form card's dark submit button is unaffected. */
+.theme-corporate .hero__cta .btn--primary { background: #ffffff; color: var(--brand); }
+.theme-corporate .hero__cta .btn--primary:hover { background: #ececec; }
 
 @media (min-width: 880px) {
   .hero__grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--sp-7); align-items: start; }
@@ -406,13 +392,13 @@ body { padding-bottom: 74px; } /* room for the mobile bar */
 .final-cta__phone { font-size: var(--fs-xl); font-weight: 800; color: #fff; text-decoration: none; display: inline-block; margin-top: var(--sp-2); }
 
 /* ----- Footer -------------------------------------------------------------- */
-.site-footer { background: #0d1620; color: #c4ccd6; padding: var(--sp-7) 0 var(--sp-6); font-size: var(--fs-sm); }
+.site-footer { background: #191919; color: #cfcfcf; padding: var(--sp-7) 0 var(--sp-6); font-size: var(--fs-sm); }
 .site-footer__grid { display: grid; gap: var(--sp-5); }
 @media (min-width: 720px) { .site-footer__grid { grid-template-columns: 1.4fr 1fr 1fr; } }
 .site-footer h4 { color: #fff; font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.08em; }
-.site-footer a { color: #c4ccd6; text-decoration: none; }
+.site-footer a { color: #cfcfcf; text-decoration: none; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
-.site-footer__legal { margin-top: var(--sp-6); padding-top: var(--sp-4); border-top: 1px solid rgba(255,255,255,0.12); color: #8a96a4; font-size: var(--fs-xs); }
+.site-footer__legal { margin-top: var(--sp-6); padding-top: var(--sp-4); border-top: 1px solid rgba(255,255,255,0.14); color: #a3a3a3; font-size: var(--fs-xs); }
 .site-footer ul { list-style: none; padding: 0; }
 .site-footer li { margin-bottom: var(--sp-2); }
 

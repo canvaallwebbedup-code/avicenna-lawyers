@@ -75,6 +75,23 @@ item lists). Languages are NOT surfaced on this page (removed per client).
   the criminal page only. For corporate/commercial there is NO free-consult claim; do not add one.
 - Billing: hybrid model — fixed fees and hourly rates.
 
+## Brand palette (design — updated 2026-06)
+Both landing pages now use ONE shared palette drawn from the firm's brand site
+(avicennalawyers.com.au), replacing the old divergent sage-green (.theme-calm) and
+navy/gold (.theme-corporate) themes. The green theme is gone entirely.
+- Primary dark (header logo, headings, buttons, dark hero/footer): #191919 (brand charcoal)
+- Deepest dark (dense/dark sections): #0e0e0e
+- Page background #ffffff; light section wash #f1f1f1 (calm page softens to #f6f6f6)
+- Body/muted text #535353; borders #d8d8d8 (from brand #C8C8C8)
+- Focus ring #0b267f (brand navy from the Elementor kit — kept as a subtle nod)
+- GOLD accent RETAINED per client: #b8893b. The brand site has no gold of its own, so we
+  reuse the previous corporate gold. ACCESSIBILITY: gold is a DARK-BACKGROUND accent only
+  (eyebrows/rules/icons on dark hero & footer, decorative list bullets). Never gold text on
+  white — it fails WCAG AA (#b8893b on #fff ≈ 3.1:1). Eyebrows on light sections are #191919.
+- Calm (criminal) vs sharp (corporate) is now expressed through APPLICATION, not different
+  hues: criminal = light/soft hero, more whitespace, larger radius; corporate = dark brand
+  hero, denser spacing, tighter radius. Same colours on both.
+
 ## Still outstanding (this section may go stale)
 - Form endpoint not wired (Apps Script /exec) — THE launch blocker.
 - GA4 + Google Ads conversion IDs.
