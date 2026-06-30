@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+  ==========================================================================
+  Avicenna Lawyers — Root splash ("choose your matter").
+  Utility page so the bare domain resolves professionally instead of 404ing.
+  Deliberately lightweight: reuses styles.css + the existing header logo,
+  no theme class (neutral base tokens), no new assets. noindex.
+  ==========================================================================
+-->
+<html lang="en-AU" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avicenna Lawyers Pty Ltd — Merrylands, NSW</title>
+  <meta name="description" content="Avicenna Lawyers Pty Ltd — a boutique law firm in Merrylands, NSW. Choose your matter: criminal &amp; traffic, or corporate &amp; commercial." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#2b5c8a" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Scoped layout for the splash only — centred, mobile-first. */
+    .splash { min-height: 100vh; min-height: 100svh; display: grid; place-items: center; padding: var(--sp-6) var(--sp-4); }
+    .splash__inner { width: 100%; max-width: 540px; text-align: center; }
+    .splash__logo { height: 52px; width: auto; margin: 0 auto var(--sp-5); }
+    .splash h1 { font-size: var(--fs-xl); margin-bottom: var(--sp-2); }
+    .splash__tagline { color: var(--text-soft); margin-bottom: var(--sp-6); }
+    .splash__choices { display: grid; gap: var(--sp-4); text-align: left; }
+    .choice {
+      display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4);
+      padding: var(--sp-5); background: var(--surface); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow-sm); text-decoration: none;
+      color: var(--text); transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+    }
+    .choice:hover { border-color: var(--brand); box-shadow: var(--shadow); }
+    .choice:active { transform: translateY(1px); }
+    .choice__title { display: block; font-weight: 800; font-size: var(--fs-md); color: var(--text); }
+    .choice__sub { display: block; font-size: var(--fs-sm); color: var(--text-soft); margin-top: 2px; }
+    .choice__arrow { flex: none; color: var(--brand); }
+    .splash__more { margin: var(--sp-6) 0 0; font-size: var(--fs-sm); color: var(--text-soft); }
+    .splash__more a { font-weight: 700; }
+    .splash__dot { margin: 0 var(--sp-2); color: var(--line); }
+    @media (min-width: 720px) { .splash__logo { height: 60px; } .splash h1 { font-size: var(--fs-2xl); } }
+  </style>
+</head>
+<body>
+  <main class="splash">
+    <div class="splash__inner">
+      <img class="splash__logo" src="assets/img/logo-header.png" alt="Avicenna Lawyers" width="1210" height="218" loading="eager" decoding="async" />
+      <h1>Avicenna Lawyers Pty Ltd</h1>
+      <p class="splash__tagline">Trusted legal support in Merrylands, NSW.</p>
+
+      <nav class="splash__choices" aria-label="Choose your matter">
+        <a class="choice" href="/criminal-traffic">
+          <span>
+            <span class="choice__title">Criminal &amp; Traffic Law</span>
+            <span class="choice__sub">Local Court &amp; traffic matters</span>
+          </span>
+          <svg class="choice__arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="choice" href="/corporate-commercial">
+          <span>
+            <span class="choice__title">Corporate &amp; Commercial Law</span>
+            <span class="choice__sub">Advice &amp; disputes for business</span>
+          </span>
+          <svg class="choice__arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </nav>
+
+      <p class="splash__more">
+        For any other matter, call
+        <a href="tel:+61290913595">(02) 9091 3595</a>
+        <span class="splash__dot" aria-hidden="true">·</span>
+        <a href="https://avicennalawyers.com.au" rel="noopener">visit our main website</a>
+      </p>
+    </div>
+  </main>
+</body>
+</html>
