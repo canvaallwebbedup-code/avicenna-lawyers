@@ -10,8 +10,8 @@
     [x] [[PHONE_DIGITS]]   - same number, digits only for tel: (e.g. +61298000000)
     [x] [[EMAIL]]          - contact email (footer)
     [x] [[ADDRESS]]        - Merrylands NSW office address (footer)
-    [ ] [[ABN]]            - firm ABN (footer)
-    [ ] [[HOURS]]          - opening hours (footer) — or remove
+    [x] [[ABN]]            - removed from footer (per client)
+    [x] [[HOURS]]          - opening hours added to footer
     [ ] Formspree ID       - replace XXXXXXXX in the Formspree URL (form action + CONFIG.FORM_ENDPOINT in main.js)
     [ ] GA4 / Ads IDs      - replace G-XXXXXXXXXX + AW-XXXXXXXXXX in the <head> gtag snippet
     [ ] Ads conv. labels   - add conversion labels to CONFIG.ADS_CONVERSIONS in main.js
@@ -27,6 +27,7 @@
   <meta name="description" content="Facing a traffic offence or a Local Court matter in Western Sydney? Speak with a calm, experienced local solicitor at Avicenna Lawyers, Merrylands. Confidential first call. We speak your language." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#3a6b63" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
   <link rel="preconnect" href="" /><!-- TODO: preconnect to form endpoint host if applicable -->
 
   <!-- Google tag (gtag.js) — GA4 + Google Ads.
@@ -52,8 +53,7 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="#top" aria-label="Avicenna Lawyers home">
-        <span class="brand__mark" aria-hidden="true">A</span>
-        <span class="brand__name">Avicenna Lawyers<small>Merrylands, NSW</small></span>
+        <img class="brand__logo" src="assets/img/logo-header.png" alt="Avicenna Lawyers" width="1210" height="218" loading="eager" decoding="async" />
       </a>
       <div class="header-actions">
         <a class="header-phone" href="tel:+61290913595" data-conversion="call_header">
@@ -425,8 +425,7 @@
     <div class="container site-footer__grid">
       <div>
         <a class="brand" href="#top" aria-label="Avicenna Lawyers home" style="margin-bottom:var(--sp-3)">
-          <span class="brand__mark" aria-hidden="true">A</span>
-          <span class="brand__name" style="color:#fff">Avicenna Lawyers<small style="color:#9aa6b2">Merrylands, NSW</small></span>
+          <img class="footer-logo" src="assets/img/logo-footer.png" alt="Avicenna Lawyers" width="2048" height="500" loading="lazy" decoding="async" />
         </a>
         <p>A boutique Western Sydney law firm helping local people with traffic and Local Court matters — calmly, confidentially, and in your language.</p>
       </div>
@@ -436,13 +435,12 @@
           <li><a href="tel:+61290913595" data-conversion="call_footer">(02) 9091 3595</a></li>
           <li><a href="mailto:info@avicennalawyers.com.au">info@avicennalawyers.com.au</a></li>
           <li>Ste 2/150-158 Merrylands Rd, Merrylands NSW 2160, Australia</li>
-          <li>[[HOURS]]</li>
+          <li>Hours: Monday–Friday 10am–6pm · Saturday–Sunday Closed</li>
         </ul>
       </div>
       <div>
         <h4>Firm</h4>
         <ul>
-          <li>ABN [[ABN]]</li>
           <li><a href="#enquiry">Make an enquiry</a></li>
           <li><a href="corporate-commercial.html">Corporate &amp; commercial</a></li>
         </ul>
@@ -450,7 +448,7 @@
     </div>
     <div class="container">
       <p class="site-footer__legal">
-        Liability limited by a scheme approved under Professional Standards Legislation. [[TODO confirm — insert any required NSW legal-practice / Law Society disclosure here.]]
+        Liability limited by a scheme approved under Professional Standards Legislation. All legal practitioners employed by Avicenna Lawyers Pty Ltd are members of the scheme.
         The information on this page is general in nature, does not constitute legal advice, and no outcome is guaranteed. Please contact us about your specific circumstances.
       </p>
     </div>
