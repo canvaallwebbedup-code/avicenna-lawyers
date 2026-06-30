@@ -18,8 +18,8 @@
     // real (still contains XXXX), submissions simulate success for previewing.
     FORM_ENDPOINT: 'https://formspree.io/f/XXXXXXXX',
 
-    // Shown to users if a submission fails. Replace [[PHONE]] in the HTML too.
-    FALLBACK_PHONE: '[[PHONE]]',
+    // Shown to users if a submission fails. Keep in sync with the phone number in the HTML.
+    FALLBACK_PHONE: '(02) 9091 3595',
 
     // --- Google Ads conversion tracking --------------------------------------
     // Two conversion actions — form vs call — so they can be valued and bid on

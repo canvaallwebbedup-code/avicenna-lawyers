@@ -5,11 +5,11 @@
   Google Ads conversion page. Calm / reassuring / discreet.
 
   TODO — FILL BEFORE GOING LIVE (every placeholder on this page):
-    [ ] [[PHONE]]          - main phone number (appears in header, hero, form errors,
+    [x] [[PHONE]]          - main phone number (appears in header, hero, form errors,
                              mobile bar, final CTA, footer, and all tel: links)
-    [ ] [[PHONE_DIGITS]]   - same number, digits only for tel: (e.g. +61298000000)
-    [ ] [[EMAIL]]          - contact email (footer)
-    [ ] [[ADDRESS]]        - Merrylands NSW office address (footer)
+    [x] [[PHONE_DIGITS]]   - same number, digits only for tel: (e.g. +61298000000)
+    [x] [[EMAIL]]          - contact email (footer)
+    [x] [[ADDRESS]]        - Merrylands NSW office address (footer)
     [ ] [[ABN]]            - firm ABN (footer)
     [ ] [[HOURS]]          - opening hours (footer) — or remove
     [ ] Formspree ID       - replace XXXXXXXX in the Formspree URL (form action + CONFIG.FORM_ENDPOINT in main.js)
@@ -56,11 +56,11 @@
         <span class="brand__name">Avicenna Lawyers<small>Merrylands, NSW</small></span>
       </a>
       <div class="header-actions">
-        <a class="header-phone" href="tel:[[PHONE_DIGITS]]" data-conversion="call_header">
-          <span>Call us</span>[[PHONE]]
+        <a class="header-phone" href="tel:+61290913595" data-conversion="call_header">
+          <span>Call us</span>(02) 9091 3595
         </a>
         <a class="btn btn--ghost" href="#enquiry">Enquire</a>
-        <a class="btn btn--primary" href="tel:[[PHONE_DIGITS]]" data-conversion="call_header_btn">Call now</a>
+        <a class="btn btn--primary" href="tel:+61290913595" data-conversion="call_header_btn">Call now</a>
       </div>
     </div>
   </header>
@@ -84,7 +84,7 @@
             </p>
             <div class="hero__cta">
               <a class="btn btn--primary btn--lg" href="#enquiry" data-conversion="hero_enquire">Request a call back</a>
-              <a class="btn btn--ghost btn--lg" href="tel:[[PHONE_DIGITS]]" data-conversion="hero_call">Or call [[PHONE]]</a>
+              <a class="btn btn--ghost btn--lg" href="tel:+61290913595" data-conversion="hero_call">Or call (02) 9091 3595</a>
             </div>
             <p class="hero__reassure">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2"/></svg>
@@ -377,7 +377,7 @@
         <div>
           <h2 id="final-h">Take the first step — it's just a conversation.</h2>
           <p>One short, confidential call and you'll understand your situation and your options. No pressure, no judgement.</p>
-          <a class="final-cta__phone" href="tel:[[PHONE_DIGITS]]" data-conversion="final_call">📞 [[PHONE]]</a>
+          <a class="final-cta__phone" href="tel:+61290913595" data-conversion="final_call">📞 (02) 9091 3595</a>
           <p style="margin-top:var(--sp-2);font-size:var(--fs-sm)">Confidential · No obligation · We speak your language</p>
         </div>
         <div class="form-card">
@@ -433,9 +433,9 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:[[PHONE_DIGITS]]" data-conversion="call_footer">[[PHONE]]</a></li>
-          <li><a href="mailto:[[EMAIL]]">[[EMAIL]]</a></li>
-          <li>[[ADDRESS]]</li>
+          <li><a href="tel:+61290913595" data-conversion="call_footer">(02) 9091 3595</a></li>
+          <li><a href="mailto:info@avicennalawyers.com.au">info@avicennalawyers.com.au</a></li>
+          <li>Ste 2/150-158 Merrylands Rd, Merrylands NSW 2160, Australia</li>
           <li>[[HOURS]]</li>
         </ul>
       </div>
@@ -458,7 +458,7 @@
 
   <!-- ============================== MOBILE STICKY CTA ============================== -->
   <nav class="mobile-cta" aria-label="Quick contact">
-    <a class="btn btn--primary" href="tel:[[PHONE_DIGITS]]" data-conversion="call_mobilebar">Call now</a>
+    <a class="btn btn--primary" href="tel:+61290913595" data-conversion="call_mobilebar">Call now</a>
     <a class="btn btn--ghost" href="#enquiry" data-conversion="enquire_mobilebar">Enquire</a>
   </nav>
 

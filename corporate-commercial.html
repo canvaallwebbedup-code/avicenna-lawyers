@@ -5,10 +5,10 @@
   Google Ads conversion page. Sharp / confident / commercial.
 
   TODO — FILL BEFORE GOING LIVE (every placeholder on this page):
-    [ ] [[PHONE]]          - main phone number (header, hero, mobile bar, final CTA, footer)
-    [ ] [[PHONE_DIGITS]]   - same number, digits only for tel: (e.g. +61298000000)
-    [ ] [[EMAIL]]          - contact email (footer)
-    [ ] [[ADDRESS]]        - Merrylands NSW office address (footer)
+    [x] [[PHONE]]          - main phone number (header, hero, mobile bar, final CTA, footer)
+    [x] [[PHONE_DIGITS]]   - same number, digits only for tel: (e.g. +61298000000)
+    [x] [[EMAIL]]          - contact email (footer)
+    [x] [[ADDRESS]]        - Merrylands NSW office address (footer)
     [ ] [[ABN]]            - firm ABN (footer)
     [ ] [[HOURS]]          - opening hours (footer) — or remove
     [ ] Formspree ID       - replace XXXXXXXX in the Formspree URL (form action + CONFIG.FORM_ENDPOINT in main.js)
@@ -52,11 +52,11 @@
         <span class="brand__name">Avicenna Lawyers<small>Merrylands, NSW</small></span>
       </a>
       <div class="header-actions">
-        <a class="header-phone" href="tel:[[PHONE_DIGITS]]" data-conversion="call_header">
-          <span>Speak to a lawyer</span>[[PHONE]]
+        <a class="header-phone" href="tel:+61290913595" data-conversion="call_header">
+          <span>Speak to a lawyer</span>(02) 9091 3595
         </a>
         <a class="btn btn--ghost" href="#enquiry">Request advice</a>
-        <a class="btn btn--primary" href="tel:[[PHONE_DIGITS]]" data-conversion="call_header_btn">Call now</a>
+        <a class="btn btn--primary" href="tel:+61290913595" data-conversion="call_header_btn">Call now</a>
       </div>
     </div>
   </header>
@@ -79,7 +79,7 @@
             </p>
             <div class="hero__cta">
               <a class="btn btn--primary btn--lg" href="#enquiry" data-conversion="hero_enquire">Request commercial advice</a>
-              <a class="btn btn--ghost btn--lg" href="tel:[[PHONE_DIGITS]]" data-conversion="hero_call">Or call [[PHONE]]</a>
+              <a class="btn btn--ghost btn--lg" href="tel:+61290913595" data-conversion="hero_call">Or call (02) 9091 3595</a>
             </div>
             <p class="hero__reassure">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -370,7 +370,7 @@
         <div>
           <h2 id="final-h">The firm your business comes back to.</h2>
           <p>Get sharp, commercial advice from a senior team that understands what's at stake — and stays with you as you grow.</p>
-          <a class="final-cta__phone" href="tel:[[PHONE_DIGITS]]" data-conversion="final_call">📞 [[PHONE]]</a>
+          <a class="final-cta__phone" href="tel:+61290913595" data-conversion="final_call">📞 (02) 9091 3595</a>
           <p style="margin-top:var(--sp-2);font-size:var(--fs-sm)">Confidential · Acting for businesses across NSW · Multilingual</p>
         </div>
         <div class="form-card">
@@ -426,9 +426,9 @@
       <div>
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:[[PHONE_DIGITS]]" data-conversion="call_footer">[[PHONE]]</a></li>
-          <li><a href="mailto:[[EMAIL]]">[[EMAIL]]</a></li>
-          <li>[[ADDRESS]]</li>
+          <li><a href="tel:+61290913595" data-conversion="call_footer">(02) 9091 3595</a></li>
+          <li><a href="mailto:info@avicennalawyers.com.au">info@avicennalawyers.com.au</a></li>
+          <li>Ste 2/150-158 Merrylands Rd, Merrylands NSW 2160, Australia</li>
           <li>[[HOURS]]</li>
         </ul>
       </div>
@@ -451,7 +451,7 @@
 
   <!-- ============================== MOBILE STICKY CTA ============================== -->
   <nav class="mobile-cta" aria-label="Quick contact">
-    <a class="btn btn--primary" href="tel:[[PHONE_DIGITS]]" data-conversion="call_mobilebar">Call now</a>
+    <a class="btn btn--primary" href="tel:+61290913595" data-conversion="call_mobilebar">Call now</a>
     <a class="btn btn--ghost" href="#enquiry" data-conversion="enquire_mobilebar">Request advice</a>
   </nav>
 
