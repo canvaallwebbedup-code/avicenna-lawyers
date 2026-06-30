@@ -15,7 +15,7 @@
     [ ] GA4 / Ads IDs      - replace G-XXXXXXXXXX + AW-XXXXXXXXXX in the <head> gtag snippet
     [ ] Ads conv. labels   - add conversion labels to CONFIG.ADS_CONVERSIONS in main.js
     [ ] Testimonials       - replace the [[PLACEHOLDER]] reviews with real Google reviews
-    [ ] [[TODO confirm]]   - verify any service lines / "free initial consult" before publishing
+    [x] [[TODO confirm]]   - service lines set (Commercial Litigation + Commercial General); no free-consult on corporate
   ==========================================================================
 -->
 <html lang="en-AU" class="no-js">
@@ -23,7 +23,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Commercial &amp; corporate lawyers who understand business | Avicenna Lawyers, Merrylands</title>
-  <meta name="description" content="Commercial disputes and corporate advice from Avicenna Lawyers, Merrylands. A boutique Western Sydney firm acting for business owners and directors across NSW — the firm you come back to. Multilingual." />
+  <meta name="description" content="Commercial disputes and corporate advice from Avicenna Lawyers, Merrylands. A boutique Western Sydney firm acting for business owners and directors across NSW — the firm you come back to." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#16314f" />
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
@@ -151,8 +151,8 @@
           <div><strong>Long-term partner</strong><span>The firm you come back to</span></div>
         </div>
         <div class="trust__item">
-          <svg class="trust__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor" stroke-width="2"/></svg>
-          <div><strong>Multilingual</strong><span>Acting for clients across NSW</span></div>
+          <svg class="trust__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Clear on fees</strong><span>Fixed-fee and hourly options</span></div>
         </div>
       </div>
     </section>
@@ -164,69 +164,44 @@
         <h2 id="help-h">Commercial legal services, built around your business</h2>
         <p class="section__lead">From a one-off dispute to ongoing corporate advice, we give you clear, commercial answers — and the same senior team every time.</p>
 
-        <div class="cards cards--3" style="margin-top:var(--sp-6)">
-          <article class="card">
-            <span class="card__num">01</span>
-            <h3>Commercial disputes &amp; litigation</h3>
-            <ul>
-              <li>Contract &amp; supplier disputes</li>
-              <li>Strategy from day one</li>
-              <li>Negotiated and court outcomes</li>
-            </ul>
-            <a class="card__link" href="#enquiry" data-conversion="service_litigation">Talk to us →</a>
-          </article>
-          <article class="card">
-            <span class="card__num">02</span>
-            <h3>Contracts &amp; commercial agreements</h3>
-            <ul>
-              <li>Drafting &amp; review</li>
-              <li>Terms of trade</li>
-              <li>Risk you can actually see</li>
-            </ul>
-            <a class="card__link" href="#enquiry" data-conversion="service_contracts">Talk to us →</a>
-          </article>
-          <article class="card">
-            <span class="card__num">03</span>
-            <h3>Corporate advisory &amp; structuring</h3>
-            <ul>
-              <li>Company &amp; trust structures</li>
-              <li>Governance &amp; compliance</li>
-              <li>Set up to scale</li>
-            </ul>
-            <a class="card__link" href="#enquiry" data-conversion="service_advisory">Talk to us →</a>
-          </article>
-          <article class="card">
-            <span class="card__num">04</span>
-            <h3>Debt recovery</h3>
-            <ul>
-              <li>Letters of demand</li>
-              <li>Recovery proceedings</li>
-              <li>Protecting your cash flow</li>
-            </ul>
-            <a class="card__link" href="#enquiry" data-conversion="service_debt">Talk to us →</a>
-          </article>
-          <article class="card">
-            <span class="card__num">05</span>
-            <h3>Shareholder &amp; partnership disputes</h3>
-            <ul>
-              <li>Deadlocks &amp; exits</li>
-              <li>Buy-outs &amp; agreements</li>
-              <li>Protecting your stake</li>
-            </ul>
-            <a class="card__link" href="#enquiry" data-conversion="service_shareholder">Talk to us →</a>
-          </article>
-          <article class="card">
-            <span class="card__num">06</span>
-            <h3>Business sale &amp; purchase</h3>
-            <ul>
-              <li>Due diligence</li>
-              <li>Sale &amp; purchase agreements</li>
-              <li>Smooth completion</li>
-            </ul>
-            <a class="card__link" href="#enquiry" data-conversion="service_sale">Talk to us →</a>
-          </article>
+        <div class="matter-group">
+          <h3 class="matter-group__title">Commercial Litigation</h3>
+          <ul class="matter-list">
+            <li>Enforcing contracts &amp; defending breach claims</li>
+            <li>Shareholder and director disputes</li>
+            <li>Employment and workplace disputes</li>
+            <li>Partnership &amp; joint venture disputes</li>
+            <li>Banking &amp; finance disputes</li>
+            <li>Franchisee &amp; franchisor disputes</li>
+            <li>Commercial and retail lease disputes</li>
+            <li>Debt recovery, statutory demands &amp; winding-up applications</li>
+          </ul>
         </div>
-        <p style="margin-top:var(--sp-4);font-size:var(--fs-sm);color:var(--text-soft)">[[TODO confirm — adjust the service lines above to match the firm's actual corporate/commercial offering.]]</p>
+
+        <div class="matter-group">
+          <h3 class="matter-group__title">Commercial General</h3>
+          <ul class="matter-list">
+            <li>Startups (business formation, structuring, agreements)</li>
+            <li>Business sales, mergers &amp; acquisitions</li>
+            <li>Agency &amp; distribution agreements</li>
+            <li>Partnership &amp; third-party agreements</li>
+            <li>Employment and independent contractor agreements</li>
+            <li>Commercial &amp; supply agreements</li>
+            <li>Shareholder and partnership agreements</li>
+            <li>Franchising law &amp; disclosure documents</li>
+            <li>Banking &amp; business financing advice</li>
+            <li>Commercial leasing</li>
+            <li>Asset purchase and share sale agreements</li>
+            <li>Terms &amp; conditions, website terms and privacy policies</li>
+            <li>Corporate governance &amp; regulatory compliance</li>
+            <li>Bankruptcy, insolvency &amp; restructuring</li>
+          </ul>
+        </div>
+
+        <div class="matter-cta">
+          <a class="btn btn--primary btn--lg" href="#enquiry" data-conversion="services_enquire">Request advice</a>
+          <a class="btn btn--ghost btn--lg" href="tel:+61290913595" data-conversion="services_call">Or call (02) 9091 3595</a>
+        </div>
       </div>
     </section>
 
@@ -270,8 +245,8 @@
             <div><h3>Relationships, not transactions</h3><p>We invest in understanding your business so we add value matter after matter.</p></div>
           </div>
           <div class="why-item">
-            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor" stroke-width="2"/></svg>
-            <div><h3>Multilingual reach</h3><p>Advice in eight languages — an asset when your business and partners are diverse.</p></div>
+            <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div><h3>Clear scope and fees</h3><p>You'll know the plan and the cost — fixed-fee or hourly — before we act.</p></div>
           </div>
           <div class="why-item">
             <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
@@ -281,26 +256,7 @@
       </div>
     </section>
 
-    <!-- ============================== MULTILINGUAL ============================== -->
-    <section class="section section--alt" aria-labelledby="lang-h">
-      <div class="container">
-        <div class="langs">
-          <p class="section__eyebrow" style="color:var(--accent)">We speak your language</p>
-          <h2 id="lang-h" class="mt-0">Commercial advice in eight languages</h2>
-          <p style="max-width:54ch;margin-left:auto;margin-right:auto">Western Sydney business is multicultural — and so are we. We act for clients and negotiate across language barriers, which means clearer instructions and fewer misunderstandings.</p>
-          <div class="langs__list">
-            <span class="lang-chip">English</span>
-            <span class="lang-chip">Farsi</span>
-            <span class="lang-chip">Dari</span>
-            <span class="lang-chip">Arabic</span>
-            <span class="lang-chip">Urdu</span>
-            <span class="lang-chip">Hindi</span>
-            <span class="lang-chip">Pashto</span>
-            <span class="lang-chip">Spanish</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Multilingual section removed — the languages feature now appears on the criminal page only. -->
 
     <!-- ============================== TESTIMONIALS ============================== -->
     <section class="section" aria-labelledby="reviews-h">
@@ -356,10 +312,6 @@
             <button class="faq__q" aria-expanded="false">Can you act for clients across NSW?</button>
             <div class="faq__a"><div class="faq__a-inner">Yes. We're based in Merrylands but act for business clients across NSW, with much of the work handled by phone, video and email where that's efficient for you.</div></div>
           </div>
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false">Do you offer multilingual commercial advice?</button>
-            <div class="faq__a"><div class="faq__a-inner">We do. Our team works in English, Farsi, Dari, Arabic, Urdu, Hindi, Pashto and Spanish — useful when instructions, contracts or counterparties span more than one language.</div></div>
-          </div>
         </div>
       </div>
     </section>
@@ -371,7 +323,7 @@
           <h2 id="final-h">The firm your business comes back to.</h2>
           <p>Get sharp, commercial advice from a senior team that understands what's at stake — and stays with you as you grow.</p>
           <a class="final-cta__phone" href="tel:+61290913595" data-conversion="final_call">📞 (02) 9091 3595</a>
-          <p style="margin-top:var(--sp-2);font-size:var(--fs-sm)">Confidential · Acting for businesses across NSW · Multilingual</p>
+          <p style="margin-top:var(--sp-2);font-size:var(--fs-sm)">Confidential · Acting for businesses across NSW</p>
         </div>
         <div class="form-card">
           <h2>Request commercial advice</h2>

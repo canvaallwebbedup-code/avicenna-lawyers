@@ -316,6 +316,26 @@ body { padding-bottom: 74px; } /* room for the mobile bar */
 .card__link { margin-top: auto; font-weight: 700; text-decoration: none; color: var(--brand); }
 .card__link:hover { text-decoration: underline; }
 
+/* ----- Scannable matter / service lists (criminal + corporate services) ---- */
+.matter-group { margin-top: var(--sp-6); }
+.matter-group__title { font-size: var(--fs-lg); margin-bottom: var(--sp-4); }
+.matter-list {
+  list-style: none; padding: 0; margin: 0;
+  columns: 2; column-gap: var(--sp-6);
+}
+@media (min-width: 760px) { .matter-list { columns: 3; } }
+.matter-list li {
+  break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid;
+  position: relative; padding-left: 1.3em; margin: 0 0 var(--sp-2);
+  font-size: var(--fs-sm); line-height: var(--lh-snug); color: var(--text);
+}
+.matter-list li::before {
+  content: ""; position: absolute; left: 0; top: 0.5em;
+  width: 6px; height: 6px; border-radius: 2px; background: var(--accent);
+}
+.matter-cta { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-7); }
+.matter-cta__note { margin-top: var(--sp-3); font-size: var(--fs-sm); color: var(--text-soft); }
+
 /* ----- Process steps ------------------------------------------------------- */
 .steps { display: grid; gap: var(--sp-4); counter-reset: step; }
 @media (min-width: 720px) { .steps { grid-template-columns: repeat(3, 1fr); } }
