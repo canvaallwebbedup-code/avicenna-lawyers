@@ -14,7 +14,7 @@
     [ ] Formspree ID       - replace XXXXXXXX in the Formspree URL (form action + CONFIG.FORM_ENDPOINT in main.js)
     [ ] GA4 / Ads IDs      - replace G-XXXXXXXXXX + AW-XXXXXXXXXX in the <head> gtag snippet
     [ ] Ads conv. labels   - add conversion labels to CONFIG.ADS_CONVERSIONS in main.js
-    [ ] Testimonials       - replace the [[PLACEHOLDER]] reviews with real Google reviews
+    [x] Testimonials       - real Google reviews added (still need [[RATING]] + [[GOOGLE_REVIEWS_URL]])
     [x] [[TODO confirm]]   - service lines set (Commercial Litigation + Commercial General); no free-consult on corporate
   ==========================================================================
 -->
@@ -263,27 +263,30 @@
       <div class="container">
         <p class="section__eyebrow">Client outcomes</p>
         <h2 id="reviews-h">What business clients say</h2>
-        <p class="placeholder-note">[[PLACEHOLDER — replace with real Google reviews before launch]]</p>
+        <p class="reviews-link"><a href="[[GOOGLE_REVIEWS_URL]]">Rated [[RATING]]★ on Google</a></p>
         <div class="testimonials" style="margin-top:var(--sp-4)">
           <figure class="testimonial">
-            <p>“[[PLACEHOLDER testimonial — commercial dispute resolved, responsive service.]]”</p>
+            <div class="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <p>“Avicenna Lawyers assisted us with advice on a commercial lease agreement. Both Mirage and Zak were knowledgeable and supportive. The advice received was detailed, easy to understand and extremely helpful to us.”</p>
             <figcaption class="testimonial__person">
-              <span class="testimonial__avatar" aria-hidden="true">D</span>
-              <span class="testimonial__meta"><strong>David K.</strong><span>Commercial dispute</span></span>
+              <span class="testimonial__avatar" aria-hidden="true">F</span>
+              <span class="testimonial__meta"><strong>Farid J.</strong><span>Google review</span></span>
             </figcaption>
           </figure>
           <figure class="testimonial">
-            <p>“[[PLACEHOLDER testimonial — ongoing corporate advice, trusted partner.]]”</p>
+            <div class="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <p>“I had a great experience working with Mirage on an employment issue. He was very attentive from the start, taking the time to listen carefully and understand all the details of my situation.”</p>
             <figcaption class="testimonial__person">
-              <span class="testimonial__avatar" aria-hidden="true">L</span>
-              <span class="testimonial__meta"><strong>Lina H.</strong><span>Corporate advisory</span></span>
+              <span class="testimonial__avatar" aria-hidden="true">S</span>
+              <span class="testimonial__meta"><strong>Sarah B.</strong><span>Google review</span></span>
             </figcaption>
           </figure>
           <figure class="testimonial">
-            <p>“[[PLACEHOLDER testimonial — business sale handled smoothly.]]”</p>
+            <div class="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <p>“Mirage from Avicenna Lawyers is honest, respectful, and operates with a high level of integrity. His strong work ethic truly stands out.”</p>
             <figcaption class="testimonial__person">
-              <span class="testimonial__avatar" aria-hidden="true">M</span>
-              <span class="testimonial__meta"><strong>Michael T.</strong><span>Business sale</span></span>
+              <span class="testimonial__avatar" aria-hidden="true">B</span>
+              <span class="testimonial__meta"><strong>Benaam</strong><span>Google review</span></span>
             </figcaption>
           </figure>
         </div>

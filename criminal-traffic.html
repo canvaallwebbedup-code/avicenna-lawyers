@@ -15,7 +15,7 @@
     [ ] Formspree ID       - replace XXXXXXXX in the Formspree URL (form action + CONFIG.FORM_ENDPOINT in main.js)
     [ ] GA4 / Ads IDs      - replace G-XXXXXXXXXX + AW-XXXXXXXXXX in the <head> gtag snippet
     [ ] Ads conv. labels   - add conversion labels to CONFIG.ADS_CONVERSIONS in main.js
-    [ ] Testimonials       - replace the [[PLACEHOLDER]] reviews with real Google reviews
+    [x] Testimonials       - real Google reviews added (still need [[RATING]] + [[GOOGLE_REVIEWS_URL]])
     [x] [[TODO confirm]]   - confirmed: free initial PHONE consultation for criminal matters
   ==========================================================================
 -->
@@ -319,27 +319,30 @@
       <div class="container">
         <p class="section__eyebrow">In their words</p>
         <h2 id="reviews-h">What local clients say</h2>
-        <p class="placeholder-note">[[PLACEHOLDER — replace with real Google reviews before launch]]</p>
+        <p class="reviews-link"><a href="[[GOOGLE_REVIEWS_URL]]">Rated [[RATING]]★ on Google</a></p>
         <div class="testimonials" style="margin-top:var(--sp-4)">
           <figure class="testimonial">
-            <p>“[[PLACEHOLDER testimonial — calm, reassuring, traffic-matter related.]]”</p>
+            <div class="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <p>“My case was complex and stressful, and I initially felt lost, but Mirage guided me step by step with clear explanations and constant support.”</p>
+            <figcaption class="testimonial__person">
+              <span class="testimonial__avatar" aria-hidden="true">R</span>
+              <span class="testimonial__meta"><strong>Rakibul I.</strong><span>Google review</span></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <p>“Did an initial consult with Mirage and he was honest with next steps and clearly not just looking for a money grab. I can't speak more highly about him.”</p>
+            <figcaption class="testimonial__person">
+              <span class="testimonial__avatar" aria-hidden="true">L</span>
+              <span class="testimonial__meta"><strong>Layla M.</strong><span>Google review</span></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <div class="testimonial__stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+            <p>“From the first interaction with Mirage from Avicenna Lawyers, I was genuinely impressed by the professionalism, responsiveness and the respectful way they approached my situation.”</p>
             <figcaption class="testimonial__person">
               <span class="testimonial__avatar" aria-hidden="true">S</span>
-              <span class="testimonial__meta"><strong>Sarah M.</strong><span>Traffic matter</span></span>
-            </figcaption>
-          </figure>
-          <figure class="testimonial">
-            <p>“[[PLACEHOLDER testimonial — about feeling looked after and informed.]]”</p>
-            <figcaption class="testimonial__person">
-              <span class="testimonial__avatar" aria-hidden="true">A</span>
-              <span class="testimonial__meta"><strong>Ahmad R.</strong><span>Licence appeal</span></span>
-            </figcaption>
-          </figure>
-          <figure class="testimonial">
-            <p>“[[PLACEHOLDER testimonial — multilingual service appreciated.]]”</p>
-            <figcaption class="testimonial__person">
-              <span class="testimonial__avatar" aria-hidden="true">P</span>
-              <span class="testimonial__meta"><strong>Priya N.</strong><span>Local Court matter</span></span>
+              <span class="testimonial__meta"><strong>Sumaiya S.</strong><span>Google review</span></span>
             </figcaption>
           </figure>
         </div>
