@@ -47,8 +47,8 @@ and `/corporate-commercial` (no `.html`). Point Google Ads at the clean URLs.
 
 These MUST be done before any paid traffic is pointed at the pages:
 
-- [ ] **Wire the enquiry form to a real endpoint.** It currently *simulates* success —
-      no enquiry reaches anyone. (Formspree, or Google Apps Script for in-house handling.)
+- [x] **Enquiry form wired to a real endpoint.** Both pages + main.js POST to the firm's
+      Google Apps Script web app (no-cors); a resolved request is treated as success.
 - [ ] **Fill every `[[PLACEHOLDER]]`** — phone, email, address, ABN, hours, solicitor
       names. A `tel:[[PHONE]]` link is a dead call button.
 - [ ] **Add GA4 + Google Ads conversion tracking** — real Measurement ID, Ads

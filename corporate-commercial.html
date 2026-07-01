@@ -11,7 +11,7 @@
     [x] [[ADDRESS]]        - Merrylands NSW office address (footer)
     [x] [[ABN]]            - removed from footer (per client)
     [x] [[HOURS]]          - opening hours added to footer
-    [ ] Formspree ID       - replace XXXXXXXX in the Formspree URL (form action + CONFIG.FORM_ENDPOINT in main.js)
+    [x] Form endpoint      - wired to Google Apps Script web app (form action + CONFIG.FORM_ENDPOINT in main.js)
     [ ] GA4 / Ads IDs      - replace G-XXXXXXXXXX + AW-XXXXXXXXXX in the <head> gtag snippet
     [ ] Ads conv. labels   - add conversion labels to CONFIG.ADS_CONVERSIONS in main.js
     [x] Testimonials       - real Google reviews added; rating 5.0 / 20 reviews + reviews link wired
@@ -27,6 +27,7 @@
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#191919" />
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://script.google.com" />
 
   <!-- Google tag (gtag.js) — GA4 + Google Ads.
        TODO: replace G-XXXXXXXXXX (GA4 Measurement ID) and AW-XXXXXXXXXX (Google Ads Conversion ID). -->
@@ -90,7 +91,7 @@
           <div id="enquiry" class="form-card">
             <h2>Request commercial advice</h2>
             <p class="form-card__hint">Tell us about your matter and we'll come back to you to discuss how we can help.</p>
-            <form class="lead-form" action="https://formspree.io/f/XXXXXXXX" method="post" novalidate data-form="corporate-commercial">
+            <form class="lead-form" action="https://script.google.com/macros/s/AKfycby5QPD_0I2dbPICMTC_-28PHrjpgqLA0zyzhgGgntECXvDss88X_7ur4nlINjU9scn_Tw/exec" method="post" novalidate data-form="corporate-commercial">
               <input type="hidden" name="page" value="corporate-commercial" />
               <div class="visually-hidden" aria-hidden="true">
                 <label>Leave this blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
@@ -353,7 +354,7 @@
         <div class="form-card">
           <h2>Request commercial advice</h2>
           <p class="form-card__hint">Leave your details and we'll be in touch to discuss your matter.</p>
-          <form class="lead-form" action="https://formspree.io/f/XXXXXXXX" method="post" novalidate data-form="corporate-commercial-final">
+          <form class="lead-form" action="https://script.google.com/macros/s/AKfycby5QPD_0I2dbPICMTC_-28PHrjpgqLA0zyzhgGgntECXvDss88X_7ur4nlINjU9scn_Tw/exec" method="post" novalidate data-form="corporate-commercial-final">
             <input type="hidden" name="page" value="corporate-commercial" />
             <div class="visually-hidden" aria-hidden="true">
               <label>Leave this blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>

@@ -12,7 +12,7 @@
     [x] [[ADDRESS]]        - Merrylands NSW office address (footer)
     [x] [[ABN]]            - removed from footer (per client)
     [x] [[HOURS]]          - opening hours added to footer
-    [ ] Formspree ID       - replace XXXXXXXX in the Formspree URL (form action + CONFIG.FORM_ENDPOINT in main.js)
+    [x] Form endpoint      - wired to Google Apps Script web app (form action + CONFIG.FORM_ENDPOINT in main.js)
     [ ] GA4 / Ads IDs      - replace G-XXXXXXXXXX + AW-XXXXXXXXXX in the <head> gtag snippet
     [ ] Ads conv. labels   - add conversion labels to CONFIG.ADS_CONVERSIONS in main.js
     [x] Testimonials       - real Google reviews added; rating 5.0 / 20 reviews + reviews link wired
@@ -28,7 +28,7 @@
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#191919" />
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-  <link rel="preconnect" href="" /><!-- TODO: preconnect to form endpoint host if applicable -->
+  <link rel="preconnect" href="https://script.google.com" />
 
   <!-- Google tag (gtag.js) — GA4 + Google Ads.
        TODO: replace G-XXXXXXXXXX (GA4 Measurement ID) and AW-XXXXXXXXXX (Google Ads Conversion ID). -->
@@ -96,8 +96,8 @@
           <div id="enquiry" class="form-card">
             <h2>Request a confidential call back</h2>
             <p class="form-card__hint">Tell us a little about your situation and we'll call you back — usually the same day.</p>
-            <!-- NOTE: Formspree endpoint. Replace XXXXXXXX with your real form ID (also in main.js CONFIG.FORM_ENDPOINT). -->
-            <form class="lead-form" action="https://formspree.io/f/XXXXXXXX" method="post" novalidate data-form="criminal-traffic">
+            <!-- Form posts to the Google Apps Script web app via main.js (see CONFIG.FORM_ENDPOINT). -->
+            <form class="lead-form" action="https://script.google.com/macros/s/AKfycby5QPD_0I2dbPICMTC_-28PHrjpgqLA0zyzhgGgntECXvDss88X_7ur4nlINjU9scn_Tw/exec" method="post" novalidate data-form="criminal-traffic">
               <input type="hidden" name="page" value="criminal-traffic" />
               <!-- honeypot (spam trap) — hidden from users -->
               <div class="visually-hidden" aria-hidden="true">
@@ -391,7 +391,7 @@
         <div class="form-card">
           <h2>Request a call back</h2>
           <p class="form-card__hint">Leave your details and we'll call you — usually the same day.</p>
-          <form class="lead-form" action="https://formspree.io/f/XXXXXXXX" method="post" novalidate data-form="criminal-traffic-final">
+          <form class="lead-form" action="https://script.google.com/macros/s/AKfycby5QPD_0I2dbPICMTC_-28PHrjpgqLA0zyzhgGgntECXvDss88X_7ur4nlINjU9scn_Tw/exec" method="post" novalidate data-form="criminal-traffic-final">
             <input type="hidden" name="page" value="criminal-traffic" />
             <div class="visually-hidden" aria-hidden="true">
               <label>Leave this blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>

@@ -12,11 +12,10 @@
      CONFIG — wire these up before launch.
    --------------------------------------------------------------------------- */
   var CONFIG = {
-    // Where lead form submissions POST — a Formspree form endpoint. Replace the
-    // XXXXXXXX with your real Formspree form ID. The HTML form action carries the
-    // same URL (no-JS native fallback) — keep the two in sync. Until the ID is
-    // real (still contains XXXX), submissions simulate success for previewing.
-    FORM_ENDPOINT: 'https://formspree.io/f/XXXXXXXX',
+    // Where lead form submissions POST — the firm's Google Apps Script web app.
+    // main.js POSTs here with mode:'no-cors' (Apps Script sends no CORS headers);
+    // the HTML form action carries the same URL as a no-JS native fallback.
+    FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycby5QPD_0I2dbPICMTC_-28PHrjpgqLA0zyzhgGgntECXvDss88X_7ur4nlINjU9scn_Tw/exec',
 
     // Shown to users if a submission fails. Keep in sync with the phone number in the HTML.
     FALLBACK_PHONE: '(02) 9091 3595',
@@ -160,8 +159,8 @@
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
 
-      // Honeypot: Formspree's built-in _gotcha field. If a bot filled it, drop
-      // silently — Formspree also discards these server-side.
+      // Honeypot: the hidden _gotcha field. If a bot filled it, drop silently
+      // (real users never see or fill it).
       var honey = form.querySelector('[name="_gotcha"]');
       if (honey && honey.value) { return; }
 
@@ -176,26 +175,17 @@
 
       track('form_submit_attempt', { form: form.getAttribute('data-form') || '' });
 
-      // Endpoint: the form's own action wins, else fall back to CONFIG. Until a
-      // real Formspree ID is in place (still contains XXXX / [[…]]), simulate a
-      // successful send so the page is demonstrable without hitting Formspree.
-      var endpoint = form.getAttribute('action');
-      if (!endpoint || endpoint.indexOf('[[') !== -1) endpoint = CONFIG.FORM_ENDPOINT;
-      var usingPlaceholder = !endpoint || endpoint.indexOf('[[') !== -1 || endpoint.indexOf('XXXX') !== -1;
+      // POST to the Google Apps Script web app. Apps Script does NOT return CORS
+      // headers, so we POST with mode:'no-cors' — the response is opaque and cannot
+      // be read, so a RESOLVED request is treated as success (the Sheet row + email
+      // the script writes are the source of truth).
+      var params = new URLSearchParams(new FormData(form));
+      params.set('page', document.title);
 
       var ok = false;
       try {
-        if (usingPlaceholder) {
-          console.warn('[lead-form] No real Formspree ID yet — simulating success. Set it in the form action / CONFIG.FORM_ENDPOINT (main.js).');
-          ok = true;
-        } else {
-          var res = await fetch(endpoint, {
-            method: 'POST',
-            headers: { Accept: 'application/json' },
-            body: new FormData(form)
-          });
-          ok = res.ok;
-        }
+        await fetch(CONFIG.FORM_ENDPOINT, { method: 'POST', mode: 'no-cors', body: params });
+        ok = true;
       } catch (err) {
         ok = false;
       }
