@@ -15,7 +15,7 @@
     // Where lead form submissions POST — the firm's Google Apps Script web app.
     // main.js POSTs here with mode:'no-cors' (Apps Script sends no CORS headers);
     // the HTML form action carries the same URL as a no-JS native fallback.
-    FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycby5QPD_0I2dbPICMTC_-28PHrjpgqLA0zyzhgGgntECXvDss88X_7ur4nlINjU9scn_Tw/exec',
+    FORM_ENDPOINT: 'https://script.google.com/macros/s/AKfycbyVFiA5mJ1QDE_6fNYj-7Kh9RE9vsbh9xHDrc8HQ2Yl6l_O7NMRlylgyOsww6y41-XFHw/exec',
 
     // Shown to users if a submission fails. Keep in sync with the phone number in the HTML.
     FALLBACK_PHONE: '(02) 9091 3595',
