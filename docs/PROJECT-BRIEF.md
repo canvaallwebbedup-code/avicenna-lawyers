@@ -51,6 +51,13 @@ the firm business owners come back to, not one-off work.
 SERVICES (updated 2026-06) — present the firm's full commercial scope under two on-page
 headings: "Commercial Litigation" and "Commercial General" (see the page for the exact
 item lists). Languages are NOT surfaced on this page (removed per client).
+RESPONSE TIME (updated 2026-07) — the firm does NOT commit to any response time. No timeframe
+promises anywhere on the site (no "within X hours", "same day", "promptly", etc.).
+BREADTH (updated 2026-07) — the corporate page ends with an "Other services we offer" section
+listing the full practice-area range (Criminal & Traffic, Civil Litigation & Disputes,
+Immigration, Wills & Estates, Employment Law, Property & Conveyancing, Consumer Law). Only
+Criminal & Traffic links out (to /criminal-traffic); the others route to the on-page enquiry
+CTA (#enquiry) so ad traffic stays on the page.
 
 ## Hard constraints / non-negotiables
 1. Criminal page: present the specific matter types listed on the page. No court-level labels
@@ -95,8 +102,6 @@ navy/gold (.theme-corporate) themes. The green theme is gone entirely.
 ## Still outstanding (this section may go stale)
 - Form endpoint not wired (Apps Script /exec) — THE launch blocker.
 - GA4 + Google Ads conversion IDs.
-- Placeholder testimonials still live — replace or remove.
-- Corporate FAQ: [[TODO confirm]] on typical response time (optional commitment).
 
 ## Done (recent)
 - Footer ABN removed; opening hours added; NSW disclosure + entity name in place.
@@ -104,3 +109,8 @@ navy/gold (.theme-corporate) themes. The green theme is gone entirely.
 - Criminal page: specific matter-type lists; free initial phone consult stated; court-level
   framing removed. Corporate page: full Commercial Litigation + Commercial General lists;
   multilingual content removed.
+- Real Google reviews on both pages. Featured CRIMINAL reviews now: Sozib S., Lawrence B.,
+  Isaack R. (5★). Corporate reviews unchanged.
+- Response-time commitment removed from corporate FAQ + form hints (no timeframe promises).
+- Corporate page: "Other services we offer" breadth section added at the bottom (Criminal &
+  Traffic linked; the other areas route to the enquiry CTA — no outbound leaks).
